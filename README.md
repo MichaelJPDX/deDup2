@@ -20,6 +20,10 @@ Leads record layout:
 Run this JS using node, eg:
 node deDup.js
 
+Command-line options:
+verbose	Print log output to console (in addition to log file)
+show	Print results to console at end
+
 Activity is logged to the file changeLog.txt
 
 This is the simplest and most direct implementation of code that, in theory, meets the goals of the challenge. The "key" to understanding this approach is the directive that the most recent records (according to entryDate) are the correct ones. Therefore, the code simply reads all of the records from the input file into a Forerunner collection, sorts them in descending order by entryDate, and transfers the first occurrence of each id/email pair it finds in the results to the output queue, discarding all the rest.
